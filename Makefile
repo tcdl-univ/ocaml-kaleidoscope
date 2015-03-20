@@ -1,4 +1,4 @@
-##===- examples/OCaml-Kaleidoscope/Chapter2/Makefile -------*- Makefile -*-===##
+##===- examples/OCaml-Kaleidoscope/Chapter3/Makefile -------*- Makefile -*-===##
 # 
 #                     The LLVM Compiler Infrastructure
 #
@@ -7,16 +7,18 @@
 # 
 ##===----------------------------------------------------------------------===##
 # 
-# This is the makefile for the Objective Caml kaleidoscope tutorial, chapter 2.
+# This is the makefile for the Objective Caml kaleidoscope tutorial, chapter 3.
 # 
 ##===----------------------------------------------------------------------===##
 
 LEVEL := ../../..
-TOOLNAME := OCaml-Kaleidoscope-Ch2
+TOOLNAME := OCaml-Kaleidoscope-Ch3
 EXAMPLE_TOOL := 1
 UsedComponents := core
-UsedOcamLibs := llvm
+UsedOcamLibs := llvm llvm_analysis
 
 OCAMLCFLAGS += -pp camlp4of
+
+ExcludeSources = $(PROJ_SRC_DIR)/myocamlbuild.ml
 
 include $(LEVEL)/bindings/ocaml/Makefile.ocaml
